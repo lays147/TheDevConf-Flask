@@ -1,89 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Flask no #TheDevConf</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="{{ url_for('static', filename='css/landing-page.css')}}" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- Temporary navbar container fix -->
-  <style>
-    .navbar-toggler {
-      z-index: 1;
-    }
-
-    @media (max-width: 576px) {
-      nav>.container {
-        width: 100%;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="container">
-      <a class="navbar-brand" href="#">Flask no #TheDevConf</a>
+{% extends "base.html" %} {% block content %}
+<header class="intro-header">
+  <div class="container">
+    <div class="intro-message">
+      <h1>Landing Page em 15 minutos com Flask</h1>
+      <h3>A Template by Start Bootstrap</h3>
+      <hr class="intro-divider">
     </div>
-  </nav>
+  </div>
+</header>
 
-  <!-- Header -->
-  <header class="intro-header">
-    <div class="container">
-      <div class="intro-message">
-        <h1>Landing Page em 15 minutos com Flask</h1>
-        <h3>A Template by Start Bootstrap</h3>
-        <hr class="intro-divider">
+<!-- Page Content -->
+<section class="content-section-a">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Aprenda o estilo de vida Pythonico!</h2>
+        <p class="lead">Python é uma das mais requisitadas e populares linguagens de multi-propósito. Nesta trilha, além de recursos da linguagem teremos muita interação com a melhor parte da linguagem, a sua comunidade!</p>
+      </div>
+      <div class="col-lg-5 offset-lg-2">
+        <br/>
+        <br/>
+        <img class="img-fluid" src="{{ url_for('static', filename='img/python.png')}}" alt="">
       </div>
     </div>
-  </header>
 
-  <!-- Page Content -->
-  <section class="content-section-a">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <hr class="section-heading-spacer">
-          <div class="clearfix"></div>
-          <h2 class="section-heading">Aprenda o estilo de vida Pythonico!</h2>
-          <p class="lead">Python é uma das mais requisitadas e populares linguagens de multi-propósito. Nesta trilha, além de recursos da linguagem teremos muita interação com a melhor parte da linguagem, a sua comunidade!</p>
-        </div>
-        <div class="col-lg-5 offset-lg-2">
-          <br/>
-          <br/>
-          <img class="img-fluid" src="{{ url_for('static', filename='img/python.png')}}" alt="">
-        </div>
-      </div>
-
-    </div>
-    <!-- /.container -->
-  </section>
-
-  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ url_for('static', filename='vendor/tether/tether.min.js')}}"></script>
-  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-
-</body>
-
-</html>
+  </div>
+  <!-- /.container -->
+</section>
+{% endblock content %}
